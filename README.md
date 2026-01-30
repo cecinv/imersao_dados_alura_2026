@@ -8,7 +8,7 @@ Repositório com os notebooks desenvolvidos durante a Imersão da Alura.
 - A pasta **data/** contém os datasets gerados ao longo das aulas, permitindo
   reutilização dos dados tratados nas etapas seguintes.
 - A pasta **aulas/** contém os notebooks organizados por tema e ordem da imersão.
-- A pasta **Aula04_dashboard** contém o código necessário para executar a aplicação no Streamlit
+- A pasta **Aula04_dashboard/** contém o código necessário para executar a aplicação no Streamlit
 
 - **Aula 01 – Exploração dos dados**  
   Exploração inicial do dataset de salários, com análise da estrutura, estatísticas descritivas e tratamento de variáveis categóricas para melhor entendimento dos dados.
@@ -21,7 +21,7 @@ Repositório com os notebooks desenvolvidos durante a Imersão da Alura.
   Criação de gráficos para análise dos dados, incluindo visualizações interativas
   com Plotly para explorar padrões salariais.
 
-  - **Aula 04 – Criação do Gráfico de Mapa e da Aplicação do Dashboard**  
+- **Aula 04 – Criação do Gráfico de Mapa e da Aplicação do Dashboard**  
   Criação de dashboard interativo com Streamlit para visualização
   e exploração dos dados, incluindo filtros dinâmicos e mapa.
 
