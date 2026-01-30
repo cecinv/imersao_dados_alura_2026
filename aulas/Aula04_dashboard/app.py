@@ -65,6 +65,11 @@ col4.metric("Cargo mais frequente", cargo_mais_frequente)
 st.markdown("---")
 
 # --- Análises Visuais com Plotly ---
+
+# Alterando cor dos gráficos
+cor_verde = ["#2E7D32"] # Um verde "floresta" forte e elegante
+escala_verde = ["#A5D6A7", "#66BB6A", "#2E7D32"] # Tons para o gráfico de pizza
+
 st.subheader("Gráficos")
 
 col_graf1, col_graf2 = st.columns(2)
@@ -78,7 +83,8 @@ with col_graf1:
             y='cargo',
             orientation='h',
             title="Top 10 cargos por salário médio",
-            labels={'salario_usd': 'Média salarial anual (USD)', 'cargo': ''}
+            labels={'salario_usd': 'Média salarial anual (USD)', 'cargo': ''},
+            color_discrete_sequence=cor_verde # Aplicando o verde
         )
         grafico_cargos.update_layout(title_x=0.1, yaxis={'categoryorder':'total ascending'})
         st.plotly_chart(grafico_cargos, use_container_width=True)
@@ -92,7 +98,8 @@ with col_graf2:
             x='salario_usd',
             nbins=30,
             title="Distribuição de salários anuais",
-            labels={'salario_usd': 'Faixa salarial (USD)', 'count': ''}
+            labels={'salario_usd': 'Faixa salarial (USD)', 'count': ''},
+            color_discrete_sequence=cor_verde # Aplicando o verde
         )
         grafico_hist.update_layout(title_x=0.1)
         st.plotly_chart(grafico_hist, use_container_width=True)
@@ -110,7 +117,7 @@ with col_graf3:
             names='tipo_trabalho',
             values='quantidade',
             title='Proporção dos tipos de trabalho',
-            hole=0.5
+            color_discrete_sequence=escala_verde # Escala de verdes para fatias
         )
         grafico_remoto.update_traces(textinfo='percent+label')
         grafico_remoto.update_layout(title_x=0.1)
